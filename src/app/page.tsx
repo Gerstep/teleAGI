@@ -10,6 +10,14 @@ export default function Home() {
   return (
     <List>
       <Section
+        header='Summon AGI'
+        footer='💚 built by AGI'
+      >
+        <Link href='/agi'>
+          <Cell subtitle='Start your journey into the unknown'>Summon</Cell>
+        </Link>
+      </Section>
+      {/* <Section
         header='Features'
         footer='You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects'
       >
@@ -35,7 +43,7 @@ export default function Home() {
         <Link href='/theme-params'>
           <Cell subtitle='Telegram application palette information'>Theme Parameters</Cell>
         </Link>
-      </Section>
+      </Section> */}
     </List>
   );
 }
