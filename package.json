@@ -10,11 +10,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^0.0.40",
+    "@langchain/openai": "^0.2.5",
     "@telegram-apps/react-router-integration": "^1.0.0",
     "@telegram-apps/sdk-react": "^1.0.0",
     "@telegram-apps/telegram-ui": "^2.1.5",
     "@tonconnect/ui-react": "^2.0.5",
+    "ai": "^3.2.37",
     "eruda": "^3.0.1",
+    "langchain": "^0.2.11",
     "next": "14.2.4",
     "normalize.css": "^8.0.1",
     "react": "^18",
