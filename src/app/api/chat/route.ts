@@ -1,4 +1,4 @@
-import { streamText } from 'ai';
+import { convertToCoreMessages, streamText } from 'ai';
 import { createOpenAI as createGroq } from '@ai-sdk/openai';
 
 const groq = createGroq({
@@ -10,8 +10,9 @@ export async function POST(req: Request) {
   const { prompt }: { prompt: string } = await req.json();
   
   const result = await streamText({
-    model: groq('llama-3.1-8b-instant'),
-    prompt,
+    model: groq('llama-3.1-70b-versatile'),
+    system: 'You are a helpful assistant.',
+    messages: convertToCoreMessages(messages),
   });
 
   return result.toAIStreamResponse();

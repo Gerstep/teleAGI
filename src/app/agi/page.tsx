@@ -1,6 +1,6 @@
 'use client'
 
-import { Link } from "@telegram-apps/telegram-ui";
+import { Cell, Link, List, Section } from "@telegram-apps/telegram-ui";
 import { openai } from '@ai-sdk/openai';
 import { generateText, streamText } from 'ai';
 import { useCompletion } from 'ai/react';
@@ -23,9 +23,15 @@ export default function AGI() {
         </div>
         {completion}
       </div>
-      <Link href='/'>
-        Back
-      </Link>
+      <List> 
+        <Section>
+            <Link href='/'>
+              <Cell>
+                Back
+                </Cell>
+            </Link>
+        </Section>
+      </List>
     </div>
   );
 }
